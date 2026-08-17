@@ -1,0 +1,1 @@
+export default {id:'vegetation',status:'available',route:'trees/',population:410,collections:['trees','tree groups','shrubs / hedges','architectural symbols','ground vegetation'],entry:'../../../trees/src/app.js'};

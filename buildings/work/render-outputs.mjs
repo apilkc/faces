@@ -1,0 +1,12 @@
+import{mkdir,writeFile,readFile}from'node:fs/promises';
+import{population,posterSVG}from'../src/app.js';
+const all=population(0),prototypes=[...all.slice(0,6),...all.slice(80,86),...all.slice(160,166)];
+await mkdir('../outputs',{recursive:true});
+await writeFile('../outputs/buildings-test-18.svg',posterSVG(prototypes,6));
+await writeFile('../outputs/buildings-test-60.svg',posterSVG([...all.slice(0,20),...all.slice(80,100),...all.slice(160,180)],10));
+await writeFile('../outputs/buildings-urban-80.svg',posterSVG(all.slice(0,80),10));
+await writeFile('../outputs/buildings-semiurban-80.svg',posterSVG(all.slice(80,160),10));
+await writeFile('../outputs/buildings-rural-80.svg',posterSVG(all.slice(160),10));
+await writeFile('../outputs/buildings-nepal-240.svg',posterSVG(all,15));
+const html=await readFile('../index.html','utf8');await writeFile('../outputs/building-contact-sheet.html',html.replace('<head>','<head><base href="../">'));
+console.log({total:all.length,urban:all.filter(x=>x.context==='urban').length,semiUrban:all.filter(x=>x.context==='semiUrban').length,rural:all.filter(x=>x.context==='rural').length});

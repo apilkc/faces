@@ -1,10 +1,10 @@
-# Nepali Faces
+# Nepal Sketch Library
 
 **Website:** [apilkc.github.io/faces](https://apilkc.github.io/faces/)
 
 Open the website above to run the interactive generator—no installation is required.
 
-A dependency-free browser application that creates 144 deterministic, fictional hand-drawn character portraits. Open `index.html` through a local web server (ES modules require HTTP), for example:
+A dependency-free Nepal Visual Generator powered by one shared Nepal Sketch Engine. The working system includes People, a 410-asset Vegetation grammar library, Buildings, Roads + Streetscape, Mobility, and an adaptive Scenes composer.
 
 ```sh
 python3 -m http.server 4173
@@ -18,9 +18,21 @@ This project was inspired by Mannay 🌹’s coding-doodles post, [“You can ju
 
 ## Architecture
 
-`src/app.js` contains the seeded PRNG, population metadata generator, similarity rejection, irregular SVG path construction, portrait renderer, editor, filtering, and SVG/PNG export. `src/styles.css` provides the responsive paper-studio interface. No uncontrolled randomness is used in portrait drawing.
+`src/drawing-engine.js` owns the shared seeded randomness, `roughLine()`, `roughPath()`, rough ellipses, SVG primitives, paper texture, and export helpers. Domain renderers layer their morphology on top:
 
-The same seed reproduces the same metadata and drawing. Population generation rejects candidates with more than 80% feature similarity to an accepted character. Every portrait can be edited, regenerated, exported as SVG, or rasterized to a transparent PNG. The full 12 × 12 population exports as one SVG poster.
+```text
+NEPAL SKETCH ENGINE
+├── PEOPLE
+├── VEGETATION
+├── BUILDINGS
+├── ROADS + STREETSCAPE
+├── MOBILITY
+└── SCENES
+```
+
+`src/library-registry.js` records the complete module taxonomy and availability. Every asset library uses the shared engine; Scenes orchestrates those libraries through adapters. Open the adaptive composer at `scenes/`.
+
+The same seed reproduces the same metadata and drawing. Domain-aware similarity rejection keeps each catalogue varied. Individual studies and complete sheets can be exported as SVG or high-resolution PNG; the Roads viewer also exposes named SVG layers for downstream editing.
 
 ## Visual principles
 
