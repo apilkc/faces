@@ -1,0 +1,1 @@
+export default {id:'mobility',status:'available',route:'mobility/',population:120,collections:['walking','bicycles','motorcycles + scooters','cars + taxis','tempos / three-wheelers','microbuses','buses','school transport','trucks','pickups','tractors','service vehicles']};

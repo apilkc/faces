@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <base href="../">
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Trees — Nepal Sketch Library</title>
+  <link rel="stylesheet" href="src/styles.css">
+</head>
+<body>
+  <header class="masthead">
+    <div><span class="eyebrow">Nepal Sketch Library · Vegetation</span><h1>Nepali Trees</h1><p>Seeded, hand-drawn specimens from an imagined journey across Nepal.</p></div>
+    <nav aria-label="Sketch library"><a href="../">People</a><span aria-current="page">Vegetation</span><span>Buildings</span><span>Mobility</span><span>Streetscape</span><span>Scenes</span></nav>
+  </header>
+  <main>
+    <section class="toolbar" aria-label="Tree controls">
+      <div class="actions"><button id="generate">Restore collection</button><button id="randomize" class="quiet">New seeds</button><button id="poster" class="quiet">Export poster</button></div>
+      <div class="filters">
+        <label>Family<select id="family-filter"><option value="all">All families</option></select></label>
+        <label>Age<select id="age-filter"><option value="all">All ages</option></select></label>
+        <label>Condition<select id="condition-filter"><option value="all">All conditions</option></select></label>
+        <label class="check"><input id="sparse-filter" type="checkbox"> Sparse</label>
+      </div>
+    </section>
+    <section class="ledger"><p><strong id="visible-count">144</strong> trees in the current field sheet</p><button id="poster-mode">12 × 12 sheet</button></section>
+    <section id="gallery" class="gallery" aria-live="polite"></section>
+  </main>
+  <dialog id="viewer"><button id="close" class="close" aria-label="Close">×</button><div id="viewer-art" class="viewer-art"></div><aside><span class="eyebrow">Generated specimen</span><h2 id="viewer-id"></h2><p id="viewer-seed"></p><div id="editor" class="editor"></div><div class="viewer-actions"><button id="regen-one">Regenerate</button><button id="svg-one" class="quiet">SVG</button><button id="png-one" class="quiet">PNG</button></div><details><summary>Tree metadata</summary><pre id="metadata"></pre></details></aside></dialog>
+  <div id="toast" role="status"></div>
+  <script type="module" src="src/app.js"></script>
+</body></html>

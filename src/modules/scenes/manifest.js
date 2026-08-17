@@ -1,0 +1,1 @@
+export default {id:'scenes',status:'available',route:'scenes/',recipes:12,testPopulation:120,collections:['urban neighborhood','peri-urban corridor','bazaar','rural settlement','mountain road','Terai settlement']};

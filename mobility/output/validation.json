@@ -1,0 +1,113 @@
+{
+  "count": 42,
+  "passed": 42,
+  "failures": [],
+  "dimensions": {
+    "pedestrian": {
+      "length": 0.45,
+      "width": 0.5,
+      "height": 1.72,
+      "wheelbase": 0,
+      "wheelRadius": 0
+    },
+    "porter": {
+      "length": 0.55,
+      "width": 0.6,
+      "height": 1.7,
+      "wheelbase": 0,
+      "wheelRadius": 0
+    },
+    "wheelchair": {
+      "length": 1.05,
+      "width": 0.68,
+      "height": 1.25,
+      "wheelbase": 0.62,
+      "wheelRadius": 0.31
+    },
+    "bicycle": {
+      "length": 1.75,
+      "width": 0.55,
+      "height": 1.08,
+      "wheelbase": 1.08,
+      "wheelRadius": 0.34
+    },
+    "motorcycle": {
+      "length": 2.05,
+      "width": 0.78,
+      "height": 1.18,
+      "wheelbase": 1.39,
+      "wheelRadius": 0.3
+    },
+    "scooter": {
+      "length": 1.82,
+      "width": 0.68,
+      "height": 1.14,
+      "wheelbase": 1.27,
+      "wheelRadius": 0.235
+    },
+    "threeWheeler": {
+      "length": 2.8,
+      "width": 1.35,
+      "height": 1.72,
+      "wheelbase": 1.9,
+      "wheelRadius": 0.28
+    },
+    "car": {
+      "length": 4.15,
+      "width": 1.72,
+      "height": 1.5,
+      "wheelbase": 2.55,
+      "wheelRadius": 0.31
+    },
+    "jeep": {
+      "length": 4.25,
+      "width": 1.82,
+      "height": 1.78,
+      "wheelbase": 2.55,
+      "wheelRadius": 0.36
+    },
+    "pickup": {
+      "length": 4.9,
+      "width": 1.82,
+      "height": 1.78,
+      "wheelbase": 2.95,
+      "wheelRadius": 0.36
+    },
+    "microbus": {
+      "length": 5.35,
+      "width": 1.9,
+      "height": 2.35,
+      "wheelbase": 3.15,
+      "wheelRadius": 0.36
+    },
+    "bus": {
+      "length": 9.2,
+      "width": 2.45,
+      "height": 3.2,
+      "wheelbase": 5.4,
+      "wheelRadius": 0.49
+    },
+    "truck": {
+      "length": 7.1,
+      "width": 2.35,
+      "height": 3.05,
+      "wheelbase": 4.2,
+      "wheelRadius": 0.48
+    },
+    "tractor": {
+      "length": 3.45,
+      "width": 1.8,
+      "height": 2.25,
+      "wheelbase": 2.05,
+      "wheelRadius": 0.6,
+      "frontWheelRadius": 0.34
+    },
+    "cart": {
+      "length": 2.15,
+      "width": 1.05,
+      "height": 1.35,
+      "wheelbase": 1.3,
+      "wheelRadius": 0.31
+    }
+  }
+}

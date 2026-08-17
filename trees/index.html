@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Trees — Nepal Sketch Library</title>
+  <link rel="stylesheet" href="src/styles.css"><link rel="stylesheet" href="src/upgrade.css">
+</head>
+<body>
+  <header class="masthead">
+    <div><span class="eyebrow">Nepal Sketch Library · Vegetation</span><h1>Vegetation Grammars</h1><p>Ecology chooses what can grow. Drawing grammar chooses how we see it.</p></div>
+    <nav aria-label="Sketch library"><a href="../">People</a><span aria-current="page">Vegetation</span><a href="../buildings/">Buildings</a><a href="../roads/">Roads + Streetscape</a><a href="../mobility/">Mobility</a><a href="../scenes/">Scenes</a></nav>
+  </header>
+  <main>
+    <section class="toolbar" aria-label="Tree controls">
+      <div class="actions"><button id="generate">Restore 410</button><button id="randomize" class="quiet">New seeds</button><button id="poster" class="quiet">Export poster</button><button id="random-style" class="quiet">Style</button><button id="random-form" class="quiet">Form</button><button id="random-trunk" class="quiet">Trunk</button><button id="random-foliage" class="quiet">Foliage</button></div>
+      <div class="filters">
+        <label>Asset<select id="vegetation-type"><option value="all">All 410 assets</option><option value="tree">250 trees</option><option value="group">50 groups</option><option value="shrub">50 shrubs</option><option value="symbol">30 symbols</option><option value="ground">30 ground elements</option></select></label>
+        <label>Style<select id="style-filter"><option value="all">All styles</option></select></label>
+        <label>Detail<select id="detail-filter"><option value="all">All detail</option><option value="0">Symbol</option><option value="1">Simple</option><option value="2">Sketch</option><option value="3">Detailed</option></select></label>
+        <label>Context<select id="context-filter"><option value="all">All contexts</option></select></label>
+        <label>Form<select id="form-filter"><option value="all">All forms</option></select></label>
+      </div>
+    </section>
+    <section class="ledger"><p><strong id="visible-count">410</strong> vegetation assets · 20 drawing grammars · 4 detail levels</p><button id="poster-mode">Compact field sheet</button></section>
+    <section id="gallery" class="gallery" aria-live="polite"></section>
+  </main>
+  <dialog id="viewer"><button id="close" class="close" aria-label="Close">×</button><div id="viewer-art" class="viewer-art"></div><aside><span class="eyebrow">Generated specimen</span><h2 id="viewer-id"></h2><p id="viewer-seed"></p><div id="editor" class="editor"></div><div class="viewer-actions"><button id="regen-one">Regenerate</button><button id="svg-one" class="quiet">SVG</button><button id="png-one" class="quiet">PNG</button></div><details><summary>Tree metadata</summary><pre id="metadata"></pre></details></aside></dialog>
+  <div id="toast" role="status"></div>
+  <script type="module" src="src/app.js"></script>
+</body></html>
