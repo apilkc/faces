@@ -2,6 +2,10 @@
 
 # Nepali Faces
 
+**Website:** [apilkc.github.io/faces](https://apilkc.github.io/faces/)
+
+Open the website above to run the interactive generator—no installation is required.
+
 A dependency-free browser application that creates 144 deterministic, fictional hand-drawn character portraits. Open `index.html` through a local web server (ES modules require HTTP), for example:
 
 ```sh
@@ -9,6 +13,10 @@ python3 -m http.server 4173
 ```
 
 Then visit `http://localhost:4173`.
+
+## Inspiration
+
+This project was inspired by Mannay 🌹’s coding-doodles post, [“You can just draw faces with javascript”](https://x.com/mannay/status/2087522034351796728), and developed into an original generative study of fictional Nepali characters. The implementation and generated portraits do not trace or reproduce individual source faces.
 
 ## Architecture
 
