@@ -1,3 +1,5 @@
+[https://github.com/apilkc/faces](https://apilkc.github.io/faces/)
+
 # Nepali Faces
 
 A dependency-free browser application that creates 144 deterministic, fictional hand-drawn character portraits. Open `index.html` through a local web server (ES modules require HTTP), for example:
