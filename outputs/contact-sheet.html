@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <base href="../">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Nepali Faces — generative character study</title>
+  <link rel="stylesheet" href="src/styles.css" />
+</head>
+<body>
+  <header class="masthead">
+    <div class="brand"><span class="nepali">नेपाली अनुहार</span><h1>Nepali Faces</h1><p>A seeded, hand-drawn character study</p></div>
+    <div class="population-mark"><strong id="visible-count">144</strong><span>fictional people<br>one drawing system</span></div>
+  </header>
+  <main>
+    <section class="toolbar" aria-label="Population controls">
+      <div class="actions">
+        <button id="generate">Generate population</button><button id="randomize" class="secondary">New seeds</button><button id="poster" class="secondary">Export poster SVG</button>
+      </div>
+      <div class="filters">
+        <label>Age<select id="age-filter"><option value="all">All ages</option></select></label>
+        <label>Presentation<select id="gender-filter"><option value="all">Everyone</option><option value="woman">Women</option><option value="man">Men</option><option value="ambiguous">Ambiguous</option></select></label>
+        <label>View<select id="orientation-filter"><option value="all">All views</option></select></label>
+        <label class="check"><input id="glasses-filter" type="checkbox"> Glasses</label>
+        <label class="check"><input id="headwear-filter" type="checkbox"> Headwear</label>
+      </div>
+    </section>
+    <section class="intro"><p>Every face is generated from a reproducible seed. Select a portrait to inspect, adjust, or export it.</p><button id="poster-mode" class="text-button">12 × 12 poster view</button></section>
+    <section id="gallery" class="gallery" aria-live="polite"></section>
+  </main>
+  <dialog id="viewer">
+    <button id="close" class="close" aria-label="Close">×</button>
+    <div class="viewer-art" id="viewer-art"></div>
+    <aside>
+      <span class="eyebrow">Character study</span><h2 id="viewer-id">NEP-001</h2><p id="viewer-seed" class="seed"></p>
+      <div id="editor" class="editor"></div>
+      <div class="viewer-actions"><button id="regen-one">Regenerate</button><button id="svg-one" class="secondary">Download SVG</button><button id="png-one" class="secondary">Download PNG</button></div>
+      <details><summary>Generation notes</summary><pre id="metadata"></pre></details>
+    </aside>
+  </dialog>
+  <div id="toast" role="status"></div>
+  <script type="module" src="src/app.js"></script>
+</body>
+</html>

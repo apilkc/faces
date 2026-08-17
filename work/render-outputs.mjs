@@ -1,0 +1,10 @@
+import {mkdir,writeFile,readFile} from 'node:fs/promises';
+import {population,posterSVGFor} from '../src/app.js';
+await mkdir('../outputs',{recursive:true});
+const people=population(0);
+await writeFile('../outputs/test-12.svg',posterSVGFor(people.slice(0,12),4));
+await writeFile('../outputs/test-48.svg',posterSVGFor(people.slice(0,48),8));
+await writeFile('../outputs/nepali-faces-144.svg',posterSVGFor(people,12));
+const shell=await readFile('../index.html','utf8');
+await writeFile('../outputs/contact-sheet.html',shell.replace('<head>','<head>\n  <base href="../">'));
+console.log(JSON.stringify({characters:people.length,first:people[0].id,last:people.at(-1).id,files:4},null,2));
