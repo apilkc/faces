@@ -1,0 +1,25 @@
+{
+  "name": "Nepal Sketch Library",
+  "image": "mcr.microsoft.com/devcontainers/base:jammy",
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "20"
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "github.copilot"
+      ]
+    }
+  },
+  "postCreateCommand": "npm install",
+  "forwardPorts": [4173],
+  "portsAttributes": {
+    "4173": {
+      "label": "Dev Server",
+      "onAutoForward": "notify"
+    }
+  },
+  "remoteUser": "root"
+}
