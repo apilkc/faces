@@ -1,5 +1,3 @@
-[https://github.com/apilkc/faces](https://apilkc.github.io/faces/)
-
 # Nepali Faces
 
 **Website:** [apilkc.github.io/faces](https://apilkc.github.io/faces/)
