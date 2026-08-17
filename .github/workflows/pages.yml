@@ -30,7 +30,16 @@ jobs:
       - name: Upload website
         uses: actions/upload-pages-artifact@v4
         with:
-          path: .
+          path: |
+            index.html
+            src/
+            buildings/
+            trees/
+            roads/
+            mobility/
+            scenes/
+            outputs/
+            .nojekyll
 
       - name: Deploy website
         id: deployment
